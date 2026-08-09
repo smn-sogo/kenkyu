@@ -1,44 +1,67 @@
-<!doctype html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#153b5c">
-  <title>研究を探す｜商業探究アーカイブ</title>
-  <meta name="description" content="都道府県・学校・年度・研究分野・授業・活動・キーワードから、商業高校の探究・課題研究を検索できます。">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body data-page="research">
-  <a class="skip-link" href="#main">本文へ移動</a>
-  <header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">探</span><span class="brand-text"><strong>商業探究アーカイブ</strong><small>SHOGYO INQUIRY ARCHIVE</small></span></a><nav id="global-nav" class="global-nav" aria-label="メインナビゲーション"><a href="index.html">ホーム</a><a class="is-current" href="research.html">研究を探す</a><a href="guide.html">研究の進め方</a><a href="about.html">このサイトについて</a></nav><div class="header-tools"><span class="pilot-badge">島根県実証版</span><button class="menu-button" type="button" aria-expanded="false" aria-controls="global-nav">メニュー</button></div></div></header>
-
-  <main id="main">
-    <section class="page-hero"><div class="section-inner"><p class="section-kicker">FIND RESEARCH</p><h1>研究を探す</h1><p>気になるテーマや学校、年度などから研究を探してみましょう。過去の研究が、新しい問いを考えるきっかけになります。</p></div></section>
-
-    <section class="research-search-section">
-      <div class="section-inner">
-        <form id="research-filter-form" class="filter-panel" autocomplete="off">
-          <div class="filter-panel-header"><div><h2>検索条件</h2><p>複数の条件を組み合わせて絞り込めます。</p></div></div>
-          <div class="filter-grid">
-            <div class="field field-keyword"><label for="search-q">キーワード</label><input id="search-q" name="q" type="search" placeholder="研究タイトル・概要・キーワードから検索"></div>
-            <div class="field"><label for="pref">都道府県</label><select id="pref" name="pref"><option value="">すべての都道府県</option></select></div>
-            <div class="field"><label for="school">学校</label><select id="school" name="school"><option value="">すべての学校</option></select></div>
-            <div class="field"><label for="year">年度</label><select id="year" name="year"><option value="">すべての年度</option></select></div>
-            <div class="field"><label for="category">研究分野</label><select id="category" name="category"><option value="">すべての研究分野</option></select></div>
-            <div class="field"><label for="activity">授業・活動</label><select id="activity" name="activity"><option value="">すべての授業・活動</option></select></div>
-          </div>
-          <div class="filter-actions"><button id="clear-filters" class="small-button secondary" type="button">条件をクリア</button><button class="small-button" type="submit">検索する</button></div>
-        </form>
-
-        <div class="results-header"><div class="results-title-wrap"><h2>検索結果</h2><p class="results-count"><strong id="result-count">0</strong> 件の研究が見つかりました</p></div><label class="sort-wrap" for="sort">並び順 <select id="sort"><option value="newest">新しい順</option><option value="oldest">古い順</option><option value="title">タイトル順</option></select></label></div>
-        <div id="active-filters" class="active-filters" aria-label="現在の検索条件"></div>
-        <div id="research-results" class="research-grid" aria-live="polite"></div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer"><div class="footer-inner"><div><strong>商業探究アーカイブ</strong><p>探究を、次の探究へ。</p></div><nav><a href="research.html">研究を探す</a><a href="guide.html">研究の進め方</a><a href="about.html">このサイトについて</a><a href="admin/login.html">管理者ログイン</a></nav><div class="footer-meta"><p>島根県商業教育研究会 総合学習部会</p><small>© 2026 商業探究アーカイブ</small></div></div></footer>
-  <script src="js/main.js"></script>
-</body>
-</html>
+[
+  {
+    "id": "R2024-0001",
+    "school_id": 32001,
+    "school_name": "島根県立出雲商業高等学校",
+    "prefecture": "島根県",
+    "year": 2024,
+    "title": "KAMISAマッチング",
+    "subtitle": "新たな時代の観光サービスを目指して",
+    "activity": "課題研究",
+    "category": "観光",
+    "keywords": [
+      "観光DX",
+      "AI",
+      "出雲大社",
+      "神社",
+      "観光周遊"
+    ],
+    "summary": "出雲大社を訪れる観光客と神様をAIでマッチングし、神様や周辺の神社への興味を広げることで観光周遊と満足度向上を目指した研究です。約1,000件のアンケートデータを活用し、AIサービス「KAMISAマッチング」を開発・実証しました。",
+    "grade": "3年",
+    "members": 4,
+    "partner": "国立研究開発法人産業技術総合研究所",
+    "pdf_url": "",
+    "published": true,
+    "created_at": "2026-08-10",
+    "points": [
+      "観光客の行動やニーズを分析し、出雲大社周辺の観光周遊に着目",
+      "約1,000件のアンケートデータをAI学習用データとして収集",
+      "産業技術総合研究所のAIプログラム「POSEIDON」を活用してKAMISAマッチングを開発",
+      "利用者アンケートや実際の利用状況から、観光客の興味喚起や周遊促進の可能性を検証"
+    ],
+    "pdf_size": "A4",
+    "pdf_pages": 5,
+    "material_ids": []
+  },
+  {
+    "id": "R2026-0001",
+    "school_id": 32001,
+    "school_name": "島根県立出雲商業高等学校",
+    "prefecture": "島根県",
+    "year": 2026,
+    "title": "地域の食を、働く人の日常へ",
+    "subtitle": "地域飲食店と企業をつなぐサービスの研究",
+    "activity": "課題研究",
+    "category": "地域活性化",
+    "keywords": [
+      "地域活性化",
+      "DX",
+      "飲食店"
+    ],
+    "summary": "地域飲食店の販路拡大と働く人の昼食環境の改善を目指し、注文サービスの開発と実証を進める研究です。",
+    "grade": "3年",
+    "members": 4,
+    "partner": "地域飲食店・自治体・企業",
+    "pdf_url": "",
+    "published": true,
+    "created_at": "2026-08-09",
+    "points": [
+      "地域飲食店と働く人の双方が抱える課題から研究テーマを設定",
+      "Webシステムを開発し、実際の利用環境で検証",
+      "自治体・地域飲食店・企業との連携を通して改善を継続"
+    ],
+    "pdf_size": "A4",
+    "pdf_pages": null,
+    "material_ids": []
+  }
+]
