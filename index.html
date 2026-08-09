@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#153b5c">
-  <title>商業探究アーカイブ｜探究を、次の探究へ。</title>
-  <meta name="description" content="商業高校の探究・課題研究の成果を学校や地域を越えて共有し、次の研究につなげるプラットフォームです。">
+  <title>商業探究アーカイブ｜学びをつなぎ、探究を深める</title>
+  <meta name="description" content="商業高校で生まれた研究成果やワークシートを学校や年度を越えて共有し、一人ひとりの探究を深めるためのプラットフォームです。">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -31,19 +31,20 @@
     <section class="hero">
       <div class="hero-inner">
         <p class="hero-eyebrow">SHOGYO INQUIRY ARCHIVE</p>
-        <h1>探究を、<span>次の探究へ。</span></h1>
-        <p class="hero-copy">商業高校で生まれた探究・課題研究の成果を、発表して終わりにしない。過去の研究から新しい問いを見つけ、学校や年度を越えて学びをつないでいくためのアーカイブです。</p>
+        <h1>商業探究アーカイブ</h1>
+        <p class="hero-subtitle">－学びをつなぎ、探究を深める－</p>
+        <p class="hero-copy">商業高校で生まれた研究成果やワークシートを活用しながら、自分らしい探究を進めるためのプラットフォームです。</p>
         <div class="hero-actions">
           <a class="action-card action-primary" href="research.html">
             <span class="action-number">01 / FIND RESEARCH</span>
             <strong>研究を探す</strong>
-            <span>県・学校・年度・分野・キーワードから、参考になる研究を探します。</span>
+            <span>先輩たちの研究から、新しいアイデアやヒントを見つけよう。</span>
             <span class="action-link">研究を見る →</span>
           </a>
           <a class="action-card" href="guide.html">
             <span class="action-number">02 / RESEARCH GUIDE</span>
             <strong>研究の進め方</strong>
-            <span>課題発見から調査・分析・発表まで、研究の流れと役立つ資料を確認します。</span>
+            <span>今の探究の段階に合わせて、役立つワークシートや資料を見つけよう。</span>
             <span class="action-link">進め方を見る →</span>
           </a>
         </div>
@@ -54,22 +55,22 @@
       <div class="section-inner narrow">
         <div class="section-heading centered">
           <p class="section-kicker">QUICK SEARCH</p>
-          <h2 id="quick-search-title">キーワードから研究を探す</h2>
-          <p>研究タイトル・概要・キーワードを横断して検索します。</p>
+          <h2 id="quick-search-title">まずは気になるテーマを探してみよう</h2>
+          <p>興味のある言葉から、参考になる研究を検索できます。</p>
         </div>
         <form class="quick-search" action="research.html" method="get">
           <label class="sr-only" for="q">研究を検索</label>
           <input id="q" name="q" type="search" placeholder="例：地域活性化、観光、商品開発、DX" autocomplete="off">
           <button type="submit">検索する</button>
         </form>
-        <div class="search-examples"><span>検索例：</span><a href="research.html?q=地域活性化">#地域活性化</a><a href="research.html?q=商品開発">#商品開発</a><a href="research.html?q=DX">#DX</a><a href="research.html?q=観光">#観光</a></div>
+        <div class="search-examples"><span>人気テーマ：</span><a href="research.html?q=地域活性化">#地域活性化</a><a href="research.html?q=商品開発">#商品開発</a><a href="research.html?q=DX">#DX</a><a href="research.html?q=観光">#観光</a></div>
       </div>
     </section>
 
     <section class="latest-section" aria-labelledby="latest-title">
       <div class="section-inner">
         <div class="section-heading row-heading">
-          <div><p class="section-kicker">LATEST RESEARCH</p><h2 id="latest-title">最近登録された研究</h2><p>新しく登録された研究成果を紹介します。</p></div>
+          <div><p class="section-kicker">LATEST RESEARCH</p><h2 id="latest-title">みんなの研究を見てみよう</h2><p>新しく登録された研究成果です。あなたの探究のヒントが見つかるかもしれません。</p></div>
           <a class="text-link" href="research.html">すべての研究を見る →</a>
         </div>
         <div id="latest-research" class="research-grid" aria-live="polite"></div>
@@ -78,7 +79,7 @@
 
     <section class="stats-section" aria-labelledby="stats-title">
       <div class="section-inner">
-        <div class="section-heading centered inverse"><p class="section-kicker">ARCHIVE STATUS</p><h2 id="stats-title">商業探究アーカイブの現在</h2><p>2026年度は島根県内で実証し、次年度の中国五県への展開を見据えています。</p></div>
+        <div class="section-heading centered inverse"><p class="section-kicker">ARCHIVE STATUS</p><h2 id="stats-title">アーカイブの登録状況</h2></div>
         <div class="stats-grid">
           <div class="stat-card"><span class="stat-label">登録校</span><strong id="school-count">0</strong><span class="stat-unit">校</span></div>
           <div class="stat-card"><span class="stat-label">研究成果</span><strong id="research-count">0</strong><span class="stat-unit">件</span></div>
@@ -89,13 +90,13 @@
 
     <section class="about-brief">
       <div class="section-inner about-grid">
-        <div><p class="section-kicker">ABOUT THE ARCHIVE</p><h2>研究を「発表して終わり」にしない。</h2></div>
-        <div><p>各校・各年度で生まれた研究成果を蓄積し、後輩や他校の生徒が新しい研究を始めるための「先行研究」として活用できる環境を目指します。研究の進め方やワークシート等も共有し、次の探究へつなげます。</p><a class="text-link" href="about.html">このサイトについて →</a></div>
+        <div><p class="section-kicker">ABOUT THE ARCHIVE</p><h2>学びをつなぎ、<br>探究を深める。</h2></div>
+        <div><p>商業高校で生まれた研究成果やワークシートを共有し、学校や年度を越えて学び合える環境を目指しています。過去の研究は、次の誰かのスタートになります。</p><a class="text-link" href="about.html">このサイトについて →</a></div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer"><div class="footer-inner"><div><strong>商業探究アーカイブ</strong><p>探究を、次の探究へ。</p></div><nav aria-label="フッターナビゲーション"><a href="research.html">研究を探す</a><a href="guide.html">研究の進め方</a><a href="about.html">このサイトについて</a><a href="admin/login.html">管理者ログイン</a></nav><div class="footer-meta"><p>島根県商業教育研究会 総合学習部会</p><small>© 2026 商業探究アーカイブ</small></div></div></footer>
+  <footer class="site-footer"><div class="footer-inner"><div><strong>商業探究アーカイブ</strong><p>学びをつなぎ、探究を深める</p></div><nav aria-label="フッターナビゲーション"><a href="research.html">研究を探す</a><a href="guide.html">研究の進め方</a><a href="about.html">このサイトについて</a><a href="admin/login.html">管理者ログイン</a></nav><div class="footer-meta"><p>島根県商業教育研究会 総合学習部会</p><small>© 2026 商業探究アーカイブ</small></div></div></footer>
   <script src="js/main.js"></script>
 </body>
 </html>
