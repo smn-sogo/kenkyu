@@ -66,44 +66,42 @@
 .guide-step-number{display:flex!important;flex-direction:column;align-items:center;justify-content:center;line-height:1.05}
 .guide-step-number small{display:block;margin-bottom:5px;color:var(--blue);font-size:9px;font-weight:900;letter-spacing:.12em}
 
-
 /* =========================================================
-   Version 0.7 — Mobile UI full redesign for Research Guide
+   Version 0.8 — Mobile guide compact redesign
    ========================================================= */
 @media (max-width:768px){
-  .guide-page-hero{background:linear-gradient(180deg,#f6fafc 0%,#fff 100%)}
-  .guide-intro-card{display:block;margin-bottom:16px;padding:18px 16px;border-color:#cfdbe4;border-radius:16px;box-shadow:0 1px 2px rgba(21,59,92,.05),0 10px 26px rgba(21,59,92,.08)}
-  .guide-intro-label{font-size:10px;margin-bottom:4px}
-  .guide-intro-card h2{font-size:20px;line-height:1.4}
-  .guide-intro-card p{margin-top:6px;font-size:12px;line-height:1.65}
+  /* The explanatory 9 STEPS card delays access to the actual steps on mobile. */
+  .guide-intro-card{display:none}
 
-  .guide-list{gap:12px}
-  .guide-step-link{display:flex;flex-direction:column;align-items:stretch;gap:10px;padding:17px 16px;border-color:#cfdbe4;border-radius:15px;box-shadow:0 1px 2px rgba(21,59,92,.05),0 10px 26px rgba(21,59,92,.08)}
-  .guide-step-number{display:inline-flex!important;align-self:flex-start;width:auto!important;height:auto!important;min-width:82px;padding:7px 10px;border-radius:999px!important;background:#e7f0f5;font-size:13px!important;line-height:1!important}
-  .guide-step-number small{display:inline!important;margin:0 5px 0 0!important;font-size:8px!important;letter-spacing:.10em!important}
-  .guide-step-link h2{font-size:19px;line-height:1.35}
-  .guide-step-link p{margin-top:4px;font-size:12px;line-height:1.65}
-  .guide-step-meta{grid-column:auto;width:100%;justify-content:flex-start;gap:8px;margin-top:1px;padding-top:10px;border-top:1px solid #e4ebf0}
-  .worksheet-badge{min-height:26px;padding:0 9px;background:#e7f0f5;font-size:10px}
-  .guide-step-link:has(.worksheet-badge:not(:empty)){ }
+  .guide-list{gap:8px}
+  .guide-step-link{grid-template-columns:46px minmax(0,1fr) auto;gap:10px;padding:12px 12px;border:1px solid #cbd7e0;border-radius:12px;box-shadow:0 5px 15px rgba(13,43,68,.07)}
+  .guide-step-link:hover{transform:none}
+  .guide-step-number{width:42px;height:42px;border-radius:11px;font-size:12px}
+  .guide-step-number small{margin-bottom:2px;font-size:7px;letter-spacing:.08em}
+  .guide-step-link h2{font-size:14px;line-height:1.35}
+  .guide-step-link p{display:none}
+  .guide-step-meta{grid-column:auto;display:block;text-align:right;font-size:9px;white-space:nowrap}
+  .worksheet-badge{min-height:24px;padding:0 7px;font-size:8px}
   .guide-step-arrow{display:none}
 
-  .guide-detail-title-wrap{padding:20px 16px;border-color:#cfdbe4;border-radius:16px;box-shadow:0 1px 2px rgba(21,59,92,.05),0 10px 26px rgba(21,59,92,.08)}
-  .guide-detail-step{font-size:10px}
-  .guide-detail-title-wrap h1{font-size:27px;line-height:1.28}
-  .guide-detail-title-wrap p{font-size:13px;line-height:1.65}
-
-  .guide-detail-head{gap:8px;margin-bottom:16px}
-  .guide-detail-head h2{font-size:24px}
-  .guide-detail-head>div>p:not(.section-kicker){font-size:13px;line-height:1.65}
-  .worksheet-count{font-size:11px}
-  .worksheet-list{gap:13px}
-  .worksheet-card{padding:19px 16px;border-color:#cfdbe4;border-radius:15px;box-shadow:0 1px 2px rgba(21,59,92,.05),0 10px 26px rgba(21,59,92,.08)}
-  .worksheet-school{margin-bottom:9px;font-size:11px;line-height:1.5}
-  .worksheet-card h3{font-size:19px;line-height:1.4}
-  .worksheet-description-label{margin-top:14px;font-size:9px}
-  .worksheet-card p{font-size:13px;line-height:1.72}
-  .worksheet-actions{gap:8px;margin-top:17px;padding-top:15px}
-  .worksheet-primary-button,.worksheet-secondary-link,.worksheet-unavailable{min-height:46px;border-radius:11px;font-size:12px}
-  .worksheet-empty{padding:27px 18px;border-color:#c9d6df;background:#fff}
+  .guide-detail-title-wrap{padding:16px 14px;border-color:#cbd7e0;border-radius:13px;box-shadow:0 5px 15px rgba(13,43,68,.07)}
+  .guide-detail-step{margin-bottom:3px;font-size:9px}
+  .guide-detail-title-wrap h1{font-size:23px}
+  .guide-detail-title-wrap p{margin-top:5px;font-size:11px;line-height:1.65}
+  .guide-detail-head{gap:6px;margin-bottom:12px}
+  .guide-detail-head h2{font-size:20px}
+  .guide-detail-head>div>p:not(.section-kicker){font-size:10px}
+  .worksheet-count{font-size:9px}
+  .worksheet-list{gap:9px}
+  .worksheet-card{padding:15px 14px;border-color:#cbd7e0;border-radius:13px;box-shadow:0 5px 15px rgba(13,43,68,.07)}
+  .worksheet-school{gap:5px;margin-bottom:7px;font-size:9px}
+  .worksheet-prefecture{min-height:21px;padding:0 6px;font-size:8px}
+  .worksheet-card h3{font-size:15px}
+  .worksheet-description-label{margin-top:11px;font-size:8px}
+  .worksheet-card p{margin-top:4px;font-size:11px;line-height:1.7}
+  .worksheet-actions{gap:6px;margin-top:13px;padding-top:11px}
+  .worksheet-primary-button,.worksheet-secondary-link,.worksheet-unavailable{min-height:39px;font-size:10px}
+  .worksheet-empty{padding:22px 16px;border-radius:13px}
+  .worksheet-empty strong{font-size:14px}
+  .worksheet-empty p{font-size:10px}
 }
