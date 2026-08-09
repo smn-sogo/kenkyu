@@ -27,7 +27,7 @@
       root.innerHTML = (data.steps || []).map(step => {
         const count = published.filter(w => Number(w.step) === Number(step.id)).length;
         return `<a class="guide-step-link" href="guide-detail.html?step=${encodeURIComponent(step.id)}">
-          <span class="guide-step-number">${String(step.id).padStart(2,'0')}</span>
+          <span class="guide-step-number"><small>STEP</small>${String(step.id).padStart(2,'0')}</span>
           <div><h2>${escapeHtml(step.title)}</h2><p>${escapeHtml(step.summary)}</p></div>
           <div class="guide-step-meta"><span class="worksheet-badge">${count}件のワークシート</span><span class="guide-step-arrow">→</span></div>
         </a>`;
