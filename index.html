@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b3a6f">
+  <title>商業探究アーカイブ｜探究を、次の探究へ。</title>
+  <meta name="description" content="商業高校の探究・課題研究の成果を学校や地域を越えて共有し、次の研究につなげるプラットフォームです。">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="商業探究アーカイブ ホームへ">
+        <span class="brand-mark" aria-hidden="true"><span>探</span></span>
+        <span class="brand-copy">
+          <strong>商業探究アーカイブ</strong>
+          <small>SHOGYO INQUIRY ARCHIVE</small>
+        </span>
+      </a>
+
+      <div class="header-actions">
+        <span class="pilot-badge">島根県実証版</span>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="global-nav">
+          <span></span><span></span><span></span><span class="sr-only">メニュー</span>
+        </button>
+      </div>
+
+      <nav id="global-nav" class="global-nav" aria-label="メインナビゲーション">
+        <a class="is-current" href="index.html">ホーム</a>
+        <a href="research.html">研究を探す</a>
+        <a href="guide.html">研究の進め方</a>
+        <a href="about.html">このサイトについて</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-copy-wrap">
+          <p class="eyebrow"><span></span> 商業高校の探究・課題研究をつなぐ</p>
+          <h1>探究を、<br><em>次の探究へ。</em></h1>
+          <p class="hero-lead">各校で生まれた研究成果を、発表して終わりにしない。過去の研究から新しい問いを見つけ、学校や年度を越えて学びをつないでいくためのアーカイブです。</p>
+          <div class="hero-cta-row">
+            <a class="button button-primary" href="research.html">研究を探してみる <span>→</span></a>
+            <a class="button button-ghost" href="guide.html">研究の進め方を見る</a>
+          </div>
+          <div class="hero-note"><span class="dot"></span> 生徒・教員ともに閲覧できます</div>
+        </div>
+
+        <div class="hero-panel" aria-label="主な機能">
+          <div class="hero-panel-head">
+            <span>START HERE</span>
+            <strong>今、何をしたい？</strong>
+          </div>
+          <a class="choice-card" href="research.html">
+            <span class="choice-icon" aria-hidden="true">⌕</span>
+            <span class="choice-content"><strong>研究を探す</strong><small>県・学校・年度・分野から検索</small></span>
+            <span class="choice-arrow">→</span>
+          </a>
+          <a class="choice-card" href="guide.html">
+            <span class="choice-icon" aria-hidden="true">↗</span>
+            <span class="choice-content"><strong>研究の進め方</strong><small>課題発見から発表・振り返りまで</small></span>
+            <span class="choice-arrow">→</span>
+          </a>
+          <div class="mini-stats" aria-label="掲載状況">
+            <div><strong id="hero-school-count">8</strong><span>登録校</span></div>
+            <div><strong id="hero-research-count">6</strong><span>掲載研究</span></div>
+            <div><strong>9</strong><span>研究STEP</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-search-section" aria-labelledby="quick-search-title">
+      <div class="section-inner">
+        <div class="quick-search-card">
+          <div class="quick-search-copy">
+            <span class="section-label">QUICK SEARCH</span>
+            <h2 id="quick-search-title">気になる言葉から、研究を探す。</h2>
+            <p>研究タイトル・概要・キーワードを横断して検索します。</p>
+          </div>
+          <form class="quick-search" action="research.html" method="get">
+            <label class="sr-only" for="q">研究を検索</label>
+            <div class="search-input-wrap">
+              <span class="search-icon" aria-hidden="true">⌕</span>
+              <input id="q" name="q" type="search" placeholder="例：地域活性化、観光、商品開発、DX" autocomplete="off">
+              <button type="submit">検索</button>
+            </div>
+          </form>
+          <div class="popular-words" aria-label="検索例">
+            <span>検索例</span>
+            <a href="research.html?q=地域活性化">#地域活性化</a>
+            <a href="research.html?q=商品開発">#商品開発</a>
+            <a href="research.html?q=DX">#DX</a>
+            <a href="research.html?q=観光">#観光</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="latest-section" aria-labelledby="latest-title">
+      <div class="section-inner">
+        <div class="section-heading split-heading">
+          <div>
+            <span class="section-label">LATEST RESEARCH</span>
+            <h2 id="latest-title">最近登録された研究</h2>
+            <p>県内の商業高校で取り組まれた研究から、新しく登録されたものを紹介します。</p>
+          </div>
+          <a class="text-link desktop-link" href="research.html">すべての研究を見る <span>→</span></a>
+        </div>
+
+        <div id="latest-research" class="research-grid" aria-live="polite">
+          <article class="research-card skeleton-card" aria-hidden="true"><div></div><div></div><div></div></article>
+          <article class="research-card skeleton-card" aria-hidden="true"><div></div><div></div><div></div></article>
+          <article class="research-card skeleton-card" aria-hidden="true"><div></div><div></div><div></div></article>
+        </div>
+        <a class="text-link mobile-link" href="research.html">すべての研究を見る <span>→</span></a>
+      </div>
+    </section>
+
+    <section class="guide-preview" aria-labelledby="guide-preview-title">
+      <div class="section-inner guide-preview-grid">
+        <div class="guide-intro">
+          <span class="section-label light">RESEARCH GUIDE</span>
+          <h2 id="guide-preview-title">研究は、<br>一歩ずつ進めればいい。</h2>
+          <p>「何から始めればいいか分からない」というときは、研究の流れを確認してみましょう。各STEPで使える資料や参考研究にもつながります。</p>
+          <a class="button button-light" href="guide.html">研究の進め方を見る <span>→</span></a>
+        </div>
+        <div class="steps-preview" aria-label="研究の流れ">
+          <div class="step-pill"><span>01</span><strong>課題を見つける</strong></div>
+          <div class="step-pill"><span>02</span><strong>テーマを決める</strong></div>
+          <div class="step-pill"><span>03</span><strong>問い・仮説を考える</strong></div>
+          <div class="step-pill"><span>04</span><strong>調査方法を考える</strong></div>
+          <div class="step-pill"><span>05</span><strong>情報を集める</strong></div>
+          <div class="step-pill"><span>06</span><strong>分析・考察する</strong></div>
+          <div class="step-pill"><span>07</span><strong>研究をまとめる</strong></div>
+          <div class="step-pill"><span>08</span><strong>発表する</strong></div>
+          <div class="step-pill"><span>09</span><strong>次につなげる</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="platform-section" aria-labelledby="platform-title">
+      <div class="section-inner">
+        <div class="section-heading centered">
+          <span class="section-label">ARCHIVE STATUS</span>
+          <h2 id="platform-title">学びが、少しずつ蓄積されています。</h2>
+          <p>2026年度は島根県内で実証し、次年度の中国五県への展開を見据えています。</p>
+        </div>
+        <div class="stats-grid">
+          <article class="stat-card"><span class="stat-icon" aria-hidden="true">▦</span><strong id="school-count">8</strong><span>登録校</span><small>参加する学校</small></article>
+          <article class="stat-card"><span class="stat-icon" aria-hidden="true">◫</span><strong id="research-count">6</strong><span>研究成果</span><small>共有された研究</small></article>
+          <article class="stat-card"><span class="stat-icon" aria-hidden="true">▤</span><strong id="material-count">0</strong><span>研究資料</span><small>進め方に役立つ資料</small></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="mission-section">
+      <div class="section-inner mission-grid">
+        <div class="mission-quote"><span>“</span><p>研究を「発表して終わり」にしない。</p></div>
+        <div class="mission-copy"><p>各校・各年度で生まれた研究成果を蓄積し、後輩や他校の生徒が新しい研究を始めるための「先行研究」として活用できる環境を目指します。</p><a class="text-link" href="about.html">このサイトについて <span>→</span></a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand brand-footer" href="index.html">
+          <span class="brand-mark" aria-hidden="true"><span>探</span></span>
+          <span class="brand-copy"><strong>商業探究アーカイブ</strong><small>SHOGYO INQUIRY ARCHIVE</small></span>
+        </a>
+        <p>探究を、次の探究へ。</p>
+      </div>
+      <nav class="footer-nav" aria-label="フッターナビゲーション">
+        <a href="research.html">研究を探す</a>
+        <a href="guide.html">研究の進め方</a>
+        <a href="about.html">このサイトについて</a>
+      </nav>
+      <div class="footer-meta">
+        <p>島根県商業教育研究会 総合学習部会</p>
+        <small>© 2026 商業探究アーカイブ</small>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
