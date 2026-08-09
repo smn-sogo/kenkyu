@@ -1,0 +1,5 @@
+[
+  {"id":"R2026-0001","school_id":32001,"school_name":"島根県立出雲商業高等学校","prefecture":"島根県","year":2026,"title":"地域の食を、働く人の日常へ","subtitle":"地域飲食店と企業をつなぐサービスの研究","activity":"課題研究","category":"地域活性化","keywords":["地域活性化","DX","飲食店"],"summary":"地域飲食店の販路拡大と働く人の昼食環境の改善を目指し、注文サービスの開発と実証を進める研究です。","grade":"3年","members":4,"partner":"地域飲食店・自治体・企業","pdf_url":"","published":true,"created_at":"2026-08-09"},
+  {"id":"SAMPLE-0002","school_id":32001,"school_name":"島根県立出雲商業高等学校","prefecture":"島根県","year":2026,"title":"【表示サンプル】地域資源を生かした観光プランの研究","subtitle":"","activity":"課題研究","category":"観光","keywords":["観光","地域資源","まちづくり"],"summary":"研究カードの表示確認用サンプルです。実証開始時に実際の研究成果へ置き換えます。","grade":"3年","members":5,"partner":"","pdf_url":"","published":true,"created_at":"2026-08-07"},
+  {"id":"SAMPLE-0003","school_id":32001,"school_name":"島根県立出雲商業高等学校","prefecture":"島根県","year":2026,"title":"【表示サンプル】地域産品を活用した商品開発","subtitle":"","activity":"課題研究","category":"商品開発","keywords":["商品開発","地域産品","マーケティング"],"summary":"研究カードの表示確認用サンプルです。実証開始時に実際の研究成果へ置き換えます。","grade":"3年","members":6,"partner":"","pdf_url":"","published":true,"created_at":"2026-08-05"}
+]
