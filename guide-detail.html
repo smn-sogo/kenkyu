@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#153b5c">
   <title>研究の進め方｜商業探究アーカイブ</title>
-  <meta name="description" content="課題発見から振り返りまで、探究・課題研究の流れと各校で活用されているワークシートを確認できます。">
+  <meta name="description" content="研究の各段階で活用できる各校のワークシートを閲覧できます。">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/guide.css">
 </head>
-<body data-page="guide">
+<body data-page="guide-detail">
 <a class="skip-link" href="#main">本文へ移動</a>
 <header class="site-header">
   <div class="header-inner">
@@ -20,23 +20,37 @@
   </div>
 </header>
 <main id="main">
-  <section class="page-hero guide-page-hero">
+  <section class="detail-page-hero guide-detail-hero">
     <div class="section-inner">
-      <p class="section-kicker">RESEARCH GUIDE</p>
-      <h1>研究の進め方</h1>
-      <p>研究の流れに沿って、各校で使われているワークシートを探すことができます。同じ段階でも学校ごとにさまざまな方法があります。</p>
+      <a class="detail-breadcrumb" href="guide.html">← 研究の進め方へ戻る</a>
+      <div id="guide-detail-heading"></div>
     </div>
   </section>
-  <section class="guide-section">
+  <section class="guide-detail-section">
     <div class="section-inner">
-      <div class="guide-intro-card">
+      <div class="guide-detail-head">
         <div>
-          <span class="guide-intro-label">9 STEPS</span>
-          <h2>今取り組んでいる段階を選んでください</h2>
-          <p>STEPを選ぶと、その段階で活用できる各校のワークシートを見ることができます。</p>
+          <p class="section-kicker">WORKSHEETS</p>
+          <h2>ワークシート</h2>
+          <p>学校ごとに異なるワークシートを見ることができます。目的や取り組み方に合うものを選んで活用できます。</p>
         </div>
+        <div id="worksheet-count" class="worksheet-count"></div>
       </div>
-      <div id="guide-steps" class="guide-list" aria-live="polite"></div>
+      <div id="worksheet-list" class="worksheet-list" aria-live="polite"></div>
+      <section id="worksheet-reader" class="worksheet-reader" aria-label="ワークシートビューア">
+        <div class="pdf-reader-header">
+          <div class="pdf-reader-title"><strong id="worksheet-reader-title">ワークシート</strong><small id="worksheet-reader-school"></small></div>
+          <div class="pdf-reader-tools">
+            <a id="worksheet-open-new" class="pdf-tool-link" href="#" target="_blank" rel="noopener">別タブ</a>
+            <button id="worksheet-close" class="pdf-close-button" type="button">閉じる</button>
+          </div>
+        </div>
+        <div class="pdf-reader-frame-wrap">
+          <div class="pdf-reader-loading" id="worksheet-loading">ワークシートを読み込んでいます…</div>
+          <iframe class="pdf-reader-frame" id="worksheet-frame" title="ワークシート" loading="lazy"></iframe>
+        </div>
+        <p class="pdf-reader-note">PDFはブラウザ上で閲覧できます。専用アプリは必要ありません。</p>
+      </section>
     </div>
   </section>
 </main>
