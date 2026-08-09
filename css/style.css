@@ -344,3 +344,134 @@ img{max-width:100%;display:block}
   .pdf-reader-frame{height:72vh;min-height:520px}
   .material-item{grid-template-columns:1fr}
 }
+
+
+/* =========================================================
+   Version 0.7 — Mobile UI full redesign
+   Desktop visual system is preserved. Mobile only.
+   ========================================================= */
+@media (max-width: 768px){
+  :root{
+    --mobile-bg:#edf2f6;
+    --mobile-line:#cfdbe4;
+    --mobile-shadow:0 1px 2px rgba(21,59,92,.05),0 10px 26px rgba(21,59,92,.08);
+  }
+
+  body{background:var(--mobile-bg);line-height:1.68}
+
+  /* Header */
+  .site-header{background:rgba(255,255,255,.98);backdrop-filter:blur(12px)}
+  .header-inner{padding:10px 14px;gap:12px}
+  .brand{gap:10px;max-width:calc(100% - 98px)}
+  .brand-mark{width:38px;height:38px;border-radius:11px;font-size:13px}
+  .brand-text strong{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .menu-button{min-height:40px;padding:8px 11px;border-color:#cbd8e1;border-radius:10px;background:#fff;box-shadow:0 1px 2px rgba(21,59,92,.04)}
+  .global-nav{left:12px;right:12px;top:66px;padding:8px;border-color:#cbd8e1;border-radius:14px;box-shadow:0 18px 36px rgba(13,43,68,.14)}
+  .global-nav a{padding:12px 13px;font-size:14px}
+
+  /* Hero */
+  .hero{background:linear-gradient(180deg,#f6fafc 0%,#fff 100%)}
+  .hero-inner{padding:34px 16px 30px}
+  .hero-eyebrow{margin-bottom:10px;font-size:11px;letter-spacing:.14em}
+  .hero h1{font-size:clamp(38px,11vw,52px);line-height:1.08;letter-spacing:-.045em}
+  .hero-copy{margin-top:17px;font-size:15px;line-height:1.75}
+  .hero-actions{gap:12px;margin-top:26px}
+  .action-card{padding:18px 18px 17px;border-color:var(--mobile-line);border-radius:16px;box-shadow:var(--mobile-shadow)}
+  .action-card strong{margin-top:10px;font-size:22px;line-height:1.35}
+  .action-card>span:nth-of-type(2){margin-top:5px;font-size:13px;line-height:1.6}
+  .action-link{margin-top:14px;font-size:13px}
+  .action-number{font-size:10px}
+
+  /* Common spacing */
+  .section-inner{padding:42px 16px}
+  .section-heading{margin-bottom:20px}
+  .section-heading h2{font-size:25px;line-height:1.28}
+  .section-heading p{font-size:13px;line-height:1.65}
+  .section-kicker{font-size:10px!important;margin-bottom:6px!important}
+  .row-heading{gap:10px}
+  .text-link{font-size:13px}
+
+  /* Quick search */
+  .search-section{background:#fff}
+  .quick-search{gap:10px;margin-top:20px}
+  .quick-search input{min-height:50px;padding:14px 15px;border-color:#c8d6df;border-radius:12px;background:#fff}
+  .quick-search button{min-height:50px;padding:0 18px;border-radius:12px}
+  .search-examples{gap:6px;margin-top:10px;font-size:11px}
+  .search-examples a{padding:5px 8px;background:#e8f0f5}
+
+  /* Research cards */
+  .latest-section,.research-search-section,.guide-section,.content-section{background:var(--mobile-bg)}
+  .research-grid{gap:16px}
+  .research-card{min-height:0;padding:18px;border-color:var(--mobile-line);border-radius:16px;box-shadow:var(--mobile-shadow)}
+  .research-meta{font-size:11px;line-height:1.5}
+  .research-card h3{margin:8px 0 7px;font-size:19px;line-height:1.42}
+  .research-card p{font-size:13px;line-height:1.65}
+  .research-summary{-webkit-line-clamp:3}
+  .tag-list{gap:5px;margin:14px 0 15px}
+  .tag{padding:4px 8px;font-size:10px;background:#e7f0f5}
+  .research-card-footer{margin-top:4px;padding-top:13px;border-top:1px solid #e4ebf0;align-items:center}
+  .category-label{font-size:10px}
+  .card-link{font-size:13px;white-space:nowrap}
+
+  /* Stats */
+  .stats-section .section-inner{padding-top:38px;padding-bottom:38px}
+  .stats-grid{grid-template-columns:repeat(3,1fr);gap:8px}
+  .stat-card{padding:16px 8px;border-radius:14px}
+  .stat-label{font-size:10px;line-height:1.35}
+  .stat-card strong{font-size:28px}
+  .stat-unit{font-size:10px}
+
+  /* About */
+  .about-grid{gap:16px}
+  .about-grid h2{font-size:27px;line-height:1.35}
+  .about-grid p{font-size:13px;line-height:1.75}
+
+  /* Subpage hero */
+  .page-hero{background:linear-gradient(180deg,#f6fafc 0%,#fff 100%)}
+  .page-hero .section-inner{padding-top:34px;padding-bottom:30px}
+  .page-hero h1{font-size:34px;line-height:1.18;margin-top:2px}
+  .page-hero p{font-size:14px;line-height:1.7}
+
+  /* Search/filter UI */
+  .filter-panel{padding:18px 14px;border-color:var(--mobile-line);border-radius:16px;box-shadow:var(--mobile-shadow)}
+  .filter-panel-header{margin-bottom:16px;gap:8px}
+  .filter-panel-header h2{font-size:20px}
+  .filter-panel-header p{font-size:12px}
+  .filter-grid{gap:12px}
+  .field label{margin-bottom:5px;font-size:11px}
+  .field input,.field select{height:46px;border-color:#c8d6df;border-radius:11px;padding:0 12px;background:#fff}
+  .filter-actions{gap:8px;margin-top:16px;padding-top:15px}
+  .small-button{min-width:0;min-height:46px;border-radius:11px;padding:11px 16px}
+  .small-button.secondary{order:2;border-color:transparent;background:transparent;color:#6a7a85;text-decoration:underline;text-underline-offset:3px}
+  .small-button.secondary:hover{background:transparent}
+
+  .results-header{gap:10px;margin:28px 0 14px}
+  .results-title-wrap h2{font-size:23px}
+  .results-count{font-size:12px}
+  .results-count strong{font-size:17px}
+  .sort-wrap{width:100%;justify-content:space-between}
+  .sort-wrap select{min-width:130px;height:38px}
+  .active-filters{margin:0 0 14px}
+
+  /* Guide cards if style.css guide is used */
+  .guide-list{gap:12px}
+  .guide-step{grid-template-columns:1fr;gap:10px;padding:17px 16px;border-color:var(--mobile-line);border-radius:15px;box-shadow:var(--mobile-shadow)}
+  .guide-step-number{width:max-content;height:auto;min-width:78px;padding:7px 10px;border-radius:999px;font-size:13px}
+  .guide-step h2{font-size:19px}
+  .guide-step p{font-size:12px;line-height:1.65}
+  .guide-step-arrow{display:none}
+
+  /* Detail cards */
+  .detail-card,.prose-card,.research-detail-hero-card,.detail-section-card,.report-card,.related-card,.material-item{border-color:var(--mobile-line);box-shadow:var(--mobile-shadow)}
+  .research-detail-hero-card{padding:22px 18px}
+  .research-detail-hero-card h1{font-size:27px}
+  .detail-section-card{padding:20px 17px}
+  .report-card{padding:20px 17px}
+
+  /* Footer */
+  .site-footer{background:#0a2338}
+  .footer-inner{padding:26px 16px 30px;gap:16px}
+  .footer-inner nav{display:grid;grid-template-columns:1fr;gap:8px;font-size:12px}
+  .footer-inner nav a{padding:4px 0}
+  .footer-meta{text-align:left}
+}
