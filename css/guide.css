@@ -1,0 +1,63 @@
+/* =========================================================
+   Version 0.5 — Research guide / worksheets
+   Extends the Version 0.3–0.4 visual system without changing it.
+   ========================================================= */
+.guide-page-hero{background:linear-gradient(180deg,#f7fafc 0%,#fff 100%)}
+.guide-intro-card{display:flex;align-items:center;justify-content:space-between;gap:30px;margin-bottom:24px;padding:24px 28px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(21,59,92,.045)}
+.guide-intro-label{display:inline-block;margin-bottom:5px;color:var(--blue);font-size:11px;font-weight:900;letter-spacing:.14em}
+.guide-intro-card h2{margin:0;color:var(--navy-deep);font-size:22px}
+.guide-intro-card p{margin:7px 0 0;color:var(--muted);font-size:14px}
+.guide-list{display:grid;gap:12px}
+.guide-step-link{display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:20px;align-items:center;padding:22px 24px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 7px 20px rgba(21,59,92,.035);transition:.18s ease}
+.guide-step-link:hover{transform:translateY(-2px);border-color:#bed0dc;box-shadow:0 12px 28px rgba(21,59,92,.07)}
+.guide-step-number{display:grid;place-items:center;width:58px;height:58px;border-radius:16px;background:#edf4f8;color:var(--navy);font-size:16px;font-weight:900;letter-spacing:.04em}
+.guide-step-link h2{margin:0;color:var(--navy-deep);font-size:20px;line-height:1.45}
+.guide-step-link p{margin:5px 0 0;color:var(--muted);font-size:13px}
+.guide-step-meta{display:flex;align-items:center;gap:12px;color:var(--blue);font-size:12px;font-weight:800}
+.worksheet-badge{display:inline-flex;align-items:center;min-height:28px;padding:0 10px;border-radius:999px;background:#edf4f8;color:var(--navy);font-size:11px;font-weight:800}
+.guide-step-arrow{font-size:20px;color:var(--blue)}
+
+.guide-detail-hero{background:linear-gradient(180deg,#f7fafc 0%,#fff 100%);border-bottom:1px solid var(--line)}
+.guide-detail-title-wrap{padding:26px 30px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(21,59,92,.045)}
+.guide-detail-step{display:block;margin-bottom:5px;color:var(--blue);font-size:12px;font-weight:900;letter-spacing:.12em}
+.guide-detail-title-wrap h1{margin:0;color:var(--navy-deep);font-size:clamp(30px,4vw,44px);line-height:1.35}
+.guide-detail-title-wrap p{margin:8px 0 0;color:var(--muted);font-size:15px}
+.guide-detail-section{background:var(--bg)}
+.guide-detail-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:22px}
+.guide-detail-head h2{margin:0;color:var(--navy-deep);font-size:30px}
+.guide-detail-head>div>p:not(.section-kicker){max-width:700px;margin:7px 0 0;color:var(--muted);font-size:14px}
+.worksheet-count{white-space:nowrap;color:var(--muted);font-size:12px;font-weight:800}
+.worksheet-list{display:grid;gap:16px}
+.worksheet-card{padding:26px 28px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(21,59,92,.045)}
+.worksheet-school{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:12px;color:var(--blue);font-size:12px;font-weight:900}
+.worksheet-prefecture{display:inline-flex;align-items:center;min-height:24px;padding:0 8px;border-radius:999px;background:#edf4f8;color:var(--navy);font-size:10px;font-weight:800}
+.worksheet-card h3{margin:0;color:var(--navy-deep);font-size:21px;line-height:1.45}
+.worksheet-description-label{display:block;margin-top:18px;color:var(--muted);font-size:10px;font-weight:900;letter-spacing:.1em}
+.worksheet-card p{margin:6px 0 0;color:#4f5f69;font-size:14px;line-height:1.85;white-space:pre-line}
+.worksheet-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:21px;padding-top:18px;border-top:1px solid #edf1f4}
+.worksheet-primary-button,.worksheet-secondary-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 17px;border-radius:11px;font-size:13px;font-weight:800}
+.worksheet-primary-button{border:1px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer}
+.worksheet-primary-button:hover{background:var(--navy-deep)}
+.worksheet-secondary-link{border:1px solid #cfdbe3;background:#fff;color:var(--navy)}
+.worksheet-unavailable{display:inline-flex;align-items:center;min-height:44px;padding:0 15px;border-radius:11px;background:#eef1f3;color:#7b878f;font-size:12px;font-weight:800}
+.worksheet-empty{padding:34px 26px;border:1px dashed #cdd9e1;border-radius:18px;background:#fff;text-align:center}
+.worksheet-empty strong{display:block;color:var(--navy-deep);font-size:17px}
+.worksheet-empty p{margin:6px 0 0;color:var(--muted);font-size:13px}
+.worksheet-reader{display:none;margin-top:22px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 10px 30px rgba(21,59,92,.055);overflow:hidden}
+.worksheet-reader.is-open{display:block}
+
+@media (max-width:640px){
+  .guide-intro-card{padding:20px 18px}
+  .guide-step-link{grid-template-columns:56px minmax(0,1fr);gap:14px;padding:18px}
+  .guide-step-number{width:50px;height:50px;border-radius:14px;font-size:14px}
+  .guide-step-meta{grid-column:2;justify-content:space-between}
+  .guide-step-arrow{display:none}
+  .guide-detail-title-wrap{padding:22px 18px}
+  .guide-detail-title-wrap h1{font-size:28px}
+  .guide-detail-head{align-items:flex-start;flex-direction:column}
+  .guide-detail-head h2{font-size:26px}
+  .worksheet-card{padding:22px 18px}
+  .worksheet-card h3{font-size:19px}
+  .worksheet-actions{flex-direction:column}
+  .worksheet-primary-button,.worksheet-secondary-link,.worksheet-unavailable{width:100%}
+}
