@@ -393,8 +393,8 @@ img{max-width:100%;display:block}
 
   /* Quick search: compact and task focused */
   .quick-search{gap:7px;margin-top:16px}
-  .quick-search input{height:42px;padding:0 12px;border-radius:10px;font-size:12px}
-  .quick-search button{min-height:42px;padding:0 16px;border-radius:10px;font-size:12px}
+  .quick-search input{height:52px;min-height:52px;padding:0 14px;border-radius:11px;font-size:13px}
+  .quick-search button{height:52px;min-height:52px;padding:0 16px;border-radius:11px;font-size:13px}
   .search-examples{gap:5px;margin-top:9px;font-size:9px}
   .search-examples a{padding:4px 7px;font-size:9px}
 
@@ -415,6 +415,8 @@ img{max-width:100%;display:block}
 
   /* Archive status: one compact row instead of 3 tall cards */
   .stats-section .section-inner{padding-top:32px;padding-bottom:32px}
+  .stats-section .section-heading.inverse p:not(.section-kicker){display:none}
+  .stats-section .section-heading{margin-bottom:14px}
   .stats-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;max-width:none}
   .stat-card{padding:12px 6px;border-radius:11px}
   .stat-label{font-size:9px;margin-bottom:2px}
