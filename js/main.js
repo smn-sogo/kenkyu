@@ -1,45 +1,73 @@
-const menuButton = document.querySelector('.menu-button');
-const globalNav = document.querySelector('.global-nav');
-if (menuButton && globalNav) {
-  menuButton.addEventListener('click', () => {
-    const open = globalNav.classList.toggle('is-open');
-    menuButton.setAttribute('aria-expanded', String(open));
-  });
-}
-
-const sampleResearches = [
-  {
-    year: 2026,
-    school: '島根県立出雲商業高等学校',
-    title: '地域の食を、働く人の日常へ',
-    summary: '地域飲食店と企業をつなぐ仕組みについて、地域課題の調査からサービス開発・実証まで取り組んだ研究。',
-    tags: ['地域活性化', '情報・DX', 'マーケティング']
-  },
-  {
-    year: 2026,
-    school: '島根県立○○商業高等学校',
-    title: '地域観光資源を活用した商品開発',
-    summary: '地域の観光資源に着目し、調査・企画・試作を通して新たな商品価値の創出を目指した研究。',
-    tags: ['観光', '商品開発', '地域活性化']
-  },
-  {
-    year: 2026,
-    school: '島根県立○○高等学校',
-    title: '高校生の視点から考える商店街の活性化',
-    summary: 'フィールドワークやアンケートをもとに、若者が訪れたくなる商店街づくりについて提案した研究。',
-    tags: ['地域活性化', '調査', 'マーケティング']
+(() => {
+  const menuBtn = document.querySelector('.menu-button');
+  const nav = document.querySelector('#global-nav');
+  if (menuBtn && nav) {
+    menuBtn.addEventListener('click', () => {
+      const open = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', String(!open));
+      nav.classList.toggle('is-open', !open);
+    });
   }
-];
 
-const latest = document.getElementById('latest-research');
-if (latest) {
-  latest.innerHTML = sampleResearches.map(item => `
-    <article class="research-card">
-      <div class="research-meta">${item.year}年度　${item.school}</div>
-      <h3>${item.title}</h3>
-      <p>${item.summary}</p>
-      <div class="tag-list">${item.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
-      <a class="card-link" href="research-detail.html">詳しく見る →</a>
-    </article>
-  `).join('');
-}
+  const escapeHtml = (s='') => String(s).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+
+  async function loadData() {
+    try {
+      const [researchRes, schoolRes, materialRes] = await Promise.all([
+        fetch('data/researches.json', {cache:'no-store'}),
+        fetch('data/schools.json', {cache:'no-store'}),
+        fetch('data/materials.json', {cache:'no-store'})
+      ]);
+      const researches = researchRes.ok ? await researchRes.json() : [];
+      const schools = schoolRes.ok ? await schoolRes.json() : [];
+      const materials = materialRes.ok ? await materialRes.json() : [];
+      updateStats(researches, schools, materials);
+      renderLatest(researches);
+    } catch (e) {
+      console.warn('データ読み込みに失敗しました。', e);
+      const grid = document.querySelector('#latest-research');
+      if (grid) grid.innerHTML = '<div class="notice-card">研究データを読み込めませんでした。</div>';
+    }
+  }
+
+  function updateStats(researches, schools, materials) {
+    const activeSchools = schools.filter(s => s.active !== false).length;
+    const publishedResearches = researches.filter(r => r.published !== false).length;
+    const publishedMaterials = materials.filter(m => m.published !== false).length;
+    const values = {
+      'school-count': activeSchools,
+      'hero-school-count': activeSchools,
+      'research-count': publishedResearches,
+      'hero-research-count': publishedResearches,
+      'material-count': publishedMaterials
+    };
+    Object.entries(values).forEach(([id, val]) => {
+      const el = document.getElementById(id); if (el) el.textContent = val;
+    });
+  }
+
+  function renderLatest(researches) {
+    const grid = document.querySelector('#latest-research');
+    if (!grid) return;
+    const latest = researches.filter(r => r.published !== false)
+      .sort((a,b) => String(b.created_at||'').localeCompare(String(a.created_at||'')))
+      .slice(0,3);
+    if (!latest.length) {
+      grid.innerHTML = '<div class="notice-card">研究成果はこれから登録されます。</div>';
+      return;
+    }
+    grid.innerHTML = latest.map(r => {
+      const tags = (r.keywords||[]).slice(0,3).map(t=>`<span class="tag">#${escapeHtml(t)}</span>`).join('');
+      const link = `research-detail.html?id=${encodeURIComponent(r.id)}`;
+      return `<article class="research-card">
+        <div class="research-card-top"><span class="research-school">${escapeHtml(r.school_name||'')}</span><span class="research-year">${escapeHtml(r.year||'')}年度</span></div>
+        <h3>${escapeHtml(r.title||'')}</h3>
+        <p class="research-summary">${escapeHtml(r.summary||'')}</p>
+        <div class="tag-list">${tags}</div>
+        <div class="research-card-bottom"><span class="category-label">${escapeHtml(r.category||'その他')}</span><a class="card-link" href="${link}">詳しく見る →</a></div>
+      </article>`;
+    }).join('');
+  }
+
+  loadData();
+})();
