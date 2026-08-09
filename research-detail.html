@@ -49,11 +49,38 @@
 
 <footer class="site-footer">
   <div class="footer-inner">
-    <div><strong>商業探究アーカイブ</strong><p>探究を、次の探究へ。</p></div>
+    <div><strong>商業探究アーカイブ</strong><p>学びをつなぎ、探究を深める</p></div>
     <nav><a href="research.html">研究を探す</a><a href="guide.html">研究の進め方</a><a href="about.html">このサイトについて</a><a href="admin/login.html">管理者ログイン</a></nav>
     <div class="footer-meta"><p>島根県商業教育研究会 総合学習部会</p><small>© 2026 商業探究アーカイブ</small></div>
   </div>
 </footer>
 <script src="js/main.js"></script>
+
+<script>
+(() => {
+  const PLACEHOLDER_WORDS = ['表示サンプル', '【表示サンプル】', '近日公開予定', '近日公開', 'サンプル'];
+  const root = document.getElementById('research-detail');
+  if (!root) return;
+
+  const protectDetail = () => {
+    const text = (root.textContent || '').replace(/\s+/g, ' ');
+    if (PLACEHOLDER_WORDS.some(word => text.includes(word))) {
+      // Placeholder/demo research must never be presented as a research detail page.
+      location.replace('research.html');
+      return;
+    }
+
+    // Remove unavailable/coming-soon style controls if old data contains no published file.
+    root.querySelectorAll('.report-unavailable,.worksheet-unavailable').forEach(el => {
+      const t = (el.textContent || '').trim();
+      if (/準備中|近日公開|サンプル/.test(t)) el.remove();
+    });
+  };
+
+  const observer = new MutationObserver(protectDetail);
+  observer.observe(root, { childList:true, subtree:true });
+  protectDetail();
+})();
+</script>
 </body>
 </html>
